@@ -1,5 +1,5 @@
 # American-Options-Calculator
-Defining a Python function to quickly price an american option with binomial trees given the option's main parameters. 
+Defining a Python function to quickly price an american option with binomial trees given the option's main parameters. This code was highly based in the resource "PyQuant".
 
 
 # Parameters used:
