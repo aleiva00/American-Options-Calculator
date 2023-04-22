@@ -57,6 +57,57 @@ option_price = american_option_pricer(
 )    
 
 
+# Playing w/ parameters ----
+
+#Steps in binomial tree
+steps_list = [i for i in range(1,101)]
+prices_steps=[]
+
+for i in steps_list:
+    option_price = american_option_pricer(
+        spot=55.0,
+        strike=50.0,
+        rate=0.05,
+        vol=0.3,
+        expiry=1.0,
+        steps=i,
+        option_type="call",
+    )       
+    
+    prices_steps.append(option_price)
+
+# Viz results
+
+import matplotlib.pyplot as plt
+
+import statistics as stats
+
+mean= stats.mean(prices_steps)
+
+means=[]
+for i in range(100):
+    i=mean
+    means.append(i)
+
+plt.style.use('seaborn')
+# Plot the scatter plot
+
+fig = plt.figure()
+plt.plot(steps_list, prices_steps)
+plt.plot(steps_list, means, linestyle="--", color="r", alpha=0.7)
+# Add labels to the x and y axis
+plt.xlabel("Amount of steps in tree")
+plt.ylabel("Call Option Price")
+# Show the plot
+plt.show()
+
+#SAVE FIGURE AS image--------------------------------------------
+
+fig.savefig('100 steps.png', format="png", bbox_inches='tight')
+
+#---------------------------------------------------------------
+
+
 
 
 
