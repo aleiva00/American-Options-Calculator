@@ -25,7 +25,7 @@ By increasing the number of steps or branches in the binomial tree, we are effec
 
 However, increasing the number of steps or branches also increases the computational complexity of the model, and can require more time and resources to calculate. As such, there is often a trade-off between model accuracy and computational efficiency, and the optimal number of steps or branches may depend on the specific application and requirements of the model.
 
-#Results using 100 branches
+# Results using 100 branches
 
 ![100 steps](https://user-images.githubusercontent.com/82245658/233804036-45655e1f-b01c-40fe-b23c-c750e8ecb546.png)
 
